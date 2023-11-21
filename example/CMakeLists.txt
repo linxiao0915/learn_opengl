@@ -1,0 +1,5 @@
+﻿cmake_minimum_required(VERSION 3.8)
+
+add_subdirectory(example_1_window)
+add_subdirectory(example_2_window)
+add_subdirectory(example_3_triangle)

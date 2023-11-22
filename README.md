@@ -5,9 +5,14 @@
 
 ####  更新日志
 
+**工程: example_4_rectangle**  *20231122*
+* 实现基于opengl的矩形绘制;
+* 着色器的初步应用;
+* 实现多个VAO对象的切换;
+* 对应参考资料 [<你好，三角形>](https://learnopengl-cn.github.io/01%20Getting%20started/04%20Hello%20Triangle/)
 
 **工程: example_3_triangle**  *20231121*
-* 实现基于opengl的三角形绘图;
+* 实现基于opengl的三角形绘制;
 * 着色器的初步应用;
 * 对应参考资料 [<你好，三角形>](https://learnopengl-cn.github.io/01%20Getting%20started/04%20Hello%20Triangle/) 
 

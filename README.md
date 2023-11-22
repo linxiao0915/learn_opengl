@@ -5,6 +5,11 @@
 
 ####  更新日志
 
+**工程: example_5_shader**  *20231122*
+* 实现着色器的封装;
+* 实现着色器的进一步应用;
+* 对应参考资料 [<着色器>](https://learnopengl-cn.github.io/01%20Getting%20started/05%20Shaders/)
+
 **工程: example_4_rectangle**  *20231122*
 * 实现基于opengl的矩形绘制;
 * 着色器的初步应用;

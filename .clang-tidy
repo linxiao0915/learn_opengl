@@ -12,6 +12,7 @@ CheckOptions:
   - { key: readability-identifier-naming.ParameterCase,                   value: lower_case }
   - { key: readability-identifier-naming.MacroDefinitionCase,             value: UPPER_CASE }
   - { key: readability-identifier-naming.ParameterIgnoredRegexp,          value: '.*_' }
+  - { key: readability-identifier-naming.LocalVariableIgnoredRegexp,      value: 'VAO.*|VBO.*|EBO.*' } #忽略OpenGL中常用的变量定义名
   # 枚举
   - { key: readability-identifier-naming.EnumCase,                        value: CamelCase }
   - { key: readability-identifier-naming.EnumConstantCase,                value: Camel_Snake_Case }

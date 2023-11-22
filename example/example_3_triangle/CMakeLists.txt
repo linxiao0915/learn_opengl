@@ -20,7 +20,9 @@ else ()
     message(STATUS "The glfw lib is no found!")
 endif ()
 
+# 添加glad
 include_directories(${CMAKE_SOURCE_DIR}/3rdparty/glad-3.3/include)
+set(glad_src ${CMAKE_SOURCE_DIR}/3rdparty/glad-3.3/src/glad.c)
 
 #################################################################################
 # 系统参数
@@ -31,8 +33,9 @@ include_directories(${CMAKE_SOURCE_DIR}/3rdparty/glad-3.3/include)
 #################################################################################
 
 set(PROJECT_SOURCES
+        ${glad_src}
         main.cxx
-        ${CMAKE_SOURCE_DIR}/3rdparty/glad-3.3/src/glad.c
+        shader_source.hpp
 )
 
 # 将源代码添加到此项目的可执行文件。

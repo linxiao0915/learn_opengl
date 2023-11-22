@@ -5,6 +5,10 @@
 
 ####  更新日志
 
+**工程: example_6_textures**  *20231122*
+* 实现纹理的初步应用;
+* 对应参考资料 [<纹理>](https://learnopengl-cn.github.io/01%20Getting%20started/06%20Textures/)
+
 **工程: example_5_shader**  *20231122*
 * 实现着色器的封装;
 * 实现着色器的进一步应用;

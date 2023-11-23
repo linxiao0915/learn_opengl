@@ -1,6 +1,18 @@
 ﻿<component name="ProjectCodeStyleConfiguration">
   <code_scheme name="Project" version="173">
     <option name="LINE_SEPARATOR" value="&#13;&#10;" />
+    <Objective-C-extensions>
+      <rules>
+        <rule entity="NAMESPACE" visibility="ANY" specifier="ANY" prefix="" style="CAMEL_CASE" suffix="" />
+        <rule entity="MACRO" visibility="ANY" specifier="ANY" prefix="" style="SCREAMING_SNAKE_CASE" suffix="" />
+      </rules>
+    </Objective-C-extensions>
+    <Objective-C-extensions>
+      <rules>
+        <rule entity="NAMESPACE" visibility="ANY" specifier="ANY" prefix="" style="CAMEL_CASE" suffix="" />
+        <rule entity="MACRO" visibility="ANY" specifier="ANY" prefix="" style="SCREAMING_SNAKE_CASE" suffix="" />
+      </rules>
+    </Objective-C-extensions>
     <clangFormatSettings>
       <option name="ENABLED" value="true" />
     </clangFormatSettings>

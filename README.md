@@ -7,6 +7,15 @@
 
 
 
+**工程: example_8_coordinate_systems**  *20231123*
+
+* 实现模型矩阵,视图矩阵和透射矩阵的复合应用;
+* 对应参考资料 [<坐标系统>](https://learnopengl-cn.github.io/01%20Getting%20started/08%20Coordinate%20Systems/)
+
+![example8](doc/example8.png)
+
+
+
 **工程: example_7_transformations2**  *20231123*
 
 * 在example_7_transformations的基础上, 添加imgui库实现其部分属性的配置;

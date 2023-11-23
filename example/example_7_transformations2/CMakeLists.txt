@@ -24,6 +24,9 @@ endif ()
 include_directories(${CMAKE_SOURCE_DIR}/3rdparty/glad-3.3/include)
 set(glad_src ${CMAKE_SOURCE_DIR}/3rdparty/glad-3.3/src/glad.c)
 
+# 添加glm
+include_directories(${CMAKE_SOURCE_DIR}/3rdparty/glm-0.9.9.8/include)
+
 # 添加imgui
 file(GLOB imgui_src ${CMAKE_SOURCE_DIR}/3rdparty/imgui/*)
 set(imgui_backends

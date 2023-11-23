@@ -1,6 +1,6 @@
 ﻿cmake_minimum_required(VERSION 3.8)
 
-project("example_7_transformations")
+project("example_8_coordinate_systems")
 
 #################################################################################
 # 设置C++编译器选项

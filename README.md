@@ -5,11 +5,11 @@
 
 ####  更新日志
 
-**工程: example_7_transformations2**  *20231122*
+**工程: example_7_transformations2**  *20231123*
 * 在example_7_transformations的基础上, 添加imgui库实现其部分属性的配置;
 * 对应参考资料 [<变换>](https://learnopengl-cn.github.io/01%20Getting%20started/07%20Transformations/)
 
-**工程: example_7_transformations**  *20231122*
+**工程: example_7_transformations**  *20231123*
 * 导入glm库实现矩阵计算的支持;
 * 实现对OpenGL几何图形的矩阵计算,实现其平移,旋转,缩放等操作;
 * 实现顶点、纹理等参数放在不同的对象中的构造尝试(1个VAO对应多个VBO);

@@ -43,6 +43,8 @@ set(PROJECT_SOURCES
         main.cxx
         shader.cxx
         shader.hpp
+        camera.cxx
+        camera.hpp
 )
 
 # 将源代码添加到此项目的可执行文件。

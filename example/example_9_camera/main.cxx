@@ -21,8 +21,14 @@
  *
  */
 
+void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
+
 void framebufferSizeCallback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window, Shader& shader, glm::mat4& trans);
+
+glm::mat4 view(1.0f);
+Shader* shader_ptr = nullptr;
+
 int main()
 {
     //初始化并配置glfw
@@ -43,6 +49,7 @@ int main()
     }
     glfwMakeContextCurrent(window);
     glfwSetFramebufferSizeCallback(window, framebufferSizeCallback);
+    glfwSetScrollCallback(window, scroll_callback);
 
     //初始化GLAD: 加载所有OpenGL函数指针到glad之中
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
@@ -61,6 +68,7 @@ int main()
 
         return -1;
     }
+    shader_ptr = &shader;
 
     //设置顶点数据和缓冲,以及配置顶点属性
     //------------------------------------
@@ -252,7 +260,6 @@ int main()
     model = glm::rotate(model, glm::radians(-55.0f), glm::vec3(1.0f, 0.0f, 0.0f));
     shader.setMatrix("model", glm::value_ptr(model));
 
-    glm::mat4 view(1.0f);
     view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f)); //注意，我们将矩阵向我们要进行移动场景的反方向移动。
     shader.setMatrix("view", glm::value_ptr(view));
 
@@ -286,6 +293,16 @@ int main()
 
         //model = glm::rotate(model, glm::radians(1.0f), glm::vec3(0.5f, 1.0f, 0.0f));
         //shader.setMatrix("model", glm::value_ptr(model));
+
+        //更新相机矩阵
+        //{
+        //    float radius = 10.0f;
+        //    float cam_x = sin(glfwGetTime()) * radius;
+        //    float cam_z = cos(glfwGetTime()) * radius;
+        //    glm::mat4 temp_view(1.0);
+        //    temp_view = glm::lookAt(glm::vec3(cam_x, 0.0, cam_z), glm::vec3(0.0, 0.0, 0.0), glm::vec3(0.25, 1.0, -0.3));
+        //    shader.setMatrix("view", glm::value_ptr(temp_view));
+        //}
 
         //绘画对象
         shader.use();
@@ -367,4 +384,21 @@ void framebufferSizeCallback(GLFWwindow* window, int width, int height)
     //make sure the viewport matches the new window dimensions; note that width and
     //height will be significantly larger than specified on retina displays.
     glViewport(0, 0, width, height);
+}
+
+//glfw: whenever the mouse scroll wheel scrolls, this callback is called
+//----------------------------------------------------------------------
+void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
+{
+    //camera.ProcessMouseScroll(static_cast<float>(yoffset));
+    if (yoffset > 0)
+    {
+        view = glm::translate(view, glm::vec3(0.0f, 0.0f, 1.0f)); //注意，我们将矩阵向我们要进行移动场景的反方向移动。
+        shader_ptr->setMatrix("view", glm::value_ptr(view));
+    }
+    else
+    {
+        view = glm::translate(view, glm::vec3(0.0f, 0.0f, -1.0f)); //注意，我们将矩阵向我们要进行移动场景的反方向移动。
+        shader_ptr->setMatrix("view", glm::value_ptr(view));
+    }
 }

@@ -6,6 +6,12 @@
 ####  更新日志
 
 
+**工程: example_9_camera**  *20231124*
+
+* 仅仅官方demo示例...(需求和demo不符,仅仅应付一下,后续根据自身情况重写);
+* 对应参考资料 [<摄像机>](https://learnopengl-cn.github.io/01%20Getting%20started/09%20Camera/)
+
+
 
 **工程: example_8_coordinate_systems**  *20231123*
 

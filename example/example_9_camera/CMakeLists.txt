@@ -41,10 +41,8 @@ add_definitions(-DDATA_DIR="${CMAKE_SOURCE_DIR}/data")
 set(PROJECT_SOURCES
         ${glad_src}
         main.cxx
-        shader.cxx
-        shader.hpp
-        camera.cxx
-        camera.hpp
+        shader_m.h
+        camera2.hpp
 )
 
 # 将源代码添加到此项目的可执行文件。
